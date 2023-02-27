@@ -1,16 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Admin from "./Admin/components/AdminLogin";
-import Home from "./Viewer/components/Home";
+import HomeViewer from "./Viewer/components/HomeViewer";
 
-const App = () => {
+function App()  {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/admin" component={Admin} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <h1>test</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeViewer />}  />
+          <Route path="/admin" element={<Admin />}  />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 

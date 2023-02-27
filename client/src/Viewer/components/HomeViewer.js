@@ -1,13 +1,13 @@
 import React from "react";
 
-const AdminLogin = () => {
+const HomeViewer = () => {
 
 
     return (
         <div className="main-container">
-            <h1> ADMIN LOGIN </h1>
+            <h1> HOME VIEWER </h1>
         </div>
     );
 };
 
-export default AdminLogin;
+export default HomeViewer;
