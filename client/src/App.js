@@ -1,12 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./Admin/components/AdminLogin";
+import Admin from "./Admin/components/auth/AdminLogin";
 import HomeViewer from "./Viewer/components/HomeViewer";
 
 function App()  {
   return (
     <div>
-      <h1>test</h1>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeViewer />}  />
