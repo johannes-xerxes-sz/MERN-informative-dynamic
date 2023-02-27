@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Admin from "./Admin/components/AdminLogin";
+import HomeViewer from "./Viewer/components/HomeViewer";
 
-function App() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    async function fetchUsers() {
-      const response = await fetch('http://localhost:5001/api/v1/user');
-      const data = await response.json();
-      console.log(data)
-      setUsers(data);
-    }
-    fetchUsers();
-  }, []);
-
+function App()  {
   return (
     <div>
-      <h1>Users</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user._id}>
-            {user.userName}
-            {user._id}
-            </li>
-        ))}
-      </ul>
+      <h1>test</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeViewer />}  />
+          <Route path="/admin" element={<Admin />}  />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
